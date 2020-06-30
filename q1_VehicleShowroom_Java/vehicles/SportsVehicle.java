@@ -8,4 +8,10 @@ public class SportsVehicle extends Vehicle{
         // System.out.println("Sports");
         this.turbo = tb;
     }
+
+    @Override
+    public void printDetails(){
+        super.printDetails();
+        System.out.println("Max Turbo: "+turbo+" psi");
+    }
 }

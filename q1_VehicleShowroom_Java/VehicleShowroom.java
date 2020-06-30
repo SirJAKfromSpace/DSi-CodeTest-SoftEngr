@@ -12,24 +12,35 @@ public class VehicleShowroom {
         Scanner input = new Scanner(System.in);
         this.ownerName = input.next().trim();
         listofVehicles = new ArrayList<Vehicle>();
-        System.out.println("Welcome to "+ownerName+"'s ");
+        System.out.println("----\nWelcome to "+ownerName+"'s Vehicle Showroom\n----");
     }
 
+    /*
+        Main Driver Function to run the Vehicle Showroom Java program
+    */
     public static void main(String[] args){
-        System.out.println("HELLo World!");
-        Vehicle v = new Vehicle("iubqe12", EngineType.Oil, 2.2, 5.5);
-        NormalVehicle n = new NormalVehicle("rtpegr435", EngineType.Oil, 2.2, 5.5);
-        SportsVehicle s = new SportsVehicle("ohrt640", 2.2, 5.5, 7);
-        HeavyVehicle h = new HeavyVehicle("sdc978er", 2.2, 5.5, 100);
+        // Preloading Test Data
+        Vehicle v = new Vehicle();
+        NormalVehicle n = new NormalVehicle("Toyota Axio", EngineType.Gas, 110, 15);
+        SportsVehicle s = new SportsVehicle("Audi A7", 335, 20, 6);
+        HeavyVehicle h = new HeavyVehicle("Ford Ranger", 270, 18, 3.2);
         
         VehicleShowroom show = new VehicleShowroom();
-
-
         show.listofVehicles.add(v);
         show.listofVehicles.add(n);
         show.listofVehicles.add(s);
         show.listofVehicles.add(h);
 
-        System.out.println(show.listofVehicles);
+        printAllVehiclesDeets(show.listofVehicles);
+    }
+    
+
+    public static void printAllVehiclesDeets(List<Vehicle> lVehicles){
+        int itercount = 0;
+        for(Vehicle iterVeh : lVehicles){
+            System.out.print(String.format("%02d",itercount++)+" ");
+            iterVeh.printDetails();
+            System.out.println("------");
+        }
     }
 }
