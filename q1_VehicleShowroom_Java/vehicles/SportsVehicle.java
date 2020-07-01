@@ -12,6 +12,6 @@ public class SportsVehicle extends Vehicle{
     @Override
     public void printDetails(){
         super.printDetails();
-        System.out.println("Max Turbo: "+turbo+" psi");
+        System.out.println("Turbo: "+turbo+" psi");
     }
 }

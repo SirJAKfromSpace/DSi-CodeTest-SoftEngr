@@ -1,5 +1,5 @@
 package vehicles;
-import vehicles.EngineType;
+// import vehicles.EngineType;
 
 public class Vehicle{
     private String modelNumber;
@@ -29,5 +29,9 @@ public class Vehicle{
         System.out.println("Type: "+engineType+" Engine");
         System.out.println("Power: "+enginePower+" horsepower");
         System.out.println("Tire Size: "+tireSize+" inches");
+    }
+
+    public String getModelName(){
+        return modelNumber;
     }
 }
