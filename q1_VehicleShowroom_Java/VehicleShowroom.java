@@ -9,8 +9,6 @@ public class VehicleShowroom {
     
     List<Vehicle> listofVehicles;
     public static Scanner input;
-    public static final String ANSI_YELLOW = "\u001B[33m";
-    public static final String ANSI_RESET = "\u001B[0m";
     
     public VehicleShowroom(){
         listofVehicles = new ArrayList<Vehicle>();
@@ -24,7 +22,7 @@ public class VehicleShowroom {
      */
     public int printAllVehiclesDeets(boolean shortList){
         if(listofVehicles.isEmpty()){
-            System.out.println(ANSI_YELLOW+"---\nShowroom has 0 (zero) Vehicles to display\n---"+ANSI_RESET);
+            System.out.println("---\nShowroom has 0 (zero) Vehicles to display\n---");
             return 0;
         }
         int itercount = 0;
@@ -76,9 +74,9 @@ public class VehicleShowroom {
             
             // Taking user input while bypassing invalid input errors
             try{ select = Integer.parseInt(in.nextLine()); }
-            catch(NumberFormatException e) { System.out.println(ANSI_YELLOW+"Please enter Numbers not characters!"+ANSI_RESET); }
+            catch(NumberFormatException e) { System.out.println("Please enter Numbers not characters!"); }
             if(select>4 || select<0){
-                System.out.println(ANSI_YELLOW+"Number: "+select+" is not an option\nPlease try again!"+ANSI_RESET);
+                System.out.println("Number: "+select+" is not an option\nPlease try again!");
                 continue;
             }
             
@@ -92,7 +90,7 @@ public class VehicleShowroom {
                     System.out.print("Enter Option [1-3]: ");
                     try{ select = Integer.parseInt(in.nextLine()); }
                     catch(NumberFormatException e) { 
-                        System.out.println(ANSI_YELLOW+"Please enter Numbers not characters!\nGoing back"+ANSI_RESET);
+                        System.out.println("Please enter Numbers not characters!\nGoing back");
                         break;
                     }
                     // Add Normal
@@ -104,7 +102,7 @@ public class VehicleShowroom {
                         System.out.println("Select engine type \n1. Oil  -  2. Gas  -  3. Diesel");
                         try{ select = Integer.parseInt(in.nextLine()); }
                         catch(NumberFormatException e) { 
-                            System.out.println(ANSI_YELLOW+"Please enter Numbers not characters!\nGoing back"+ANSI_RESET);
+                            System.out.println("Please enter Numbers not characters!\nGoing back");
                             break;
                         }
                         EngineType et;
@@ -112,7 +110,7 @@ public class VehicleShowroom {
                         else if(select == 2) et = EngineType.Gas; 
                         else if(select == 3) et = EngineType.Diesel; 
                         else{
-                            System.out.println(ANSI_YELLOW+"Invalid Engine Type Selected - "+select+" "+ANSI_RESET);
+                            System.out.println("Invalid Engine Type Selected - "+select+" ");
                             break;
                         }
 
@@ -120,7 +118,7 @@ public class VehicleShowroom {
                         double p;
                         try{ p = Double.parseDouble(in.nextLine()); }
                         catch(NumberFormatException er) { 
-                            System.out.println(ANSI_YELLOW+"Please enter Numbers not characters!\nGoing back"+ANSI_RESET);
+                            System.out.println("Please enter Numbers not characters!\nGoing back");
                             break;
                         }
 
@@ -128,7 +126,7 @@ public class VehicleShowroom {
                         double t;
                         try{ t = Double.parseDouble(in.nextLine()); }
                         catch(NumberFormatException er) { 
-                            System.out.println(ANSI_YELLOW+"Please enter Numbers not characters!\nGoing back"+ANSI_RESET);
+                            System.out.println("Please enter Numbers not characters!\nGoing back");
                             break;
                         }
 
@@ -147,7 +145,7 @@ public class VehicleShowroom {
                         double p;
                         try{ p = Double.parseDouble(in.nextLine()); }
                         catch(NumberFormatException er) { 
-                            System.out.println(ANSI_YELLOW+"Please enter Numbers not characters!\nGoing back"+ANSI_RESET);
+                            System.out.println("Please enter Numbers not characters!\nGoing back");
                             break;
                         }
 
@@ -155,7 +153,7 @@ public class VehicleShowroom {
                         double t;
                         try{ t = Double.parseDouble(in.nextLine()); }
                         catch(NumberFormatException er) { 
-                            System.out.println(ANSI_YELLOW+"Please enter Numbers not characters!\nGoing back"+ANSI_RESET);
+                            System.out.println("Please enter Numbers not characters!\nGoing back");
                             break;
                         }
                         
@@ -163,7 +161,7 @@ public class VehicleShowroom {
                         double tb;
                         try{ tb = Double.parseDouble(in.nextLine()); }
                         catch(NumberFormatException er) { 
-                            System.out.println(ANSI_YELLOW+"Please enter Numbers not characters!\nGoing back"+ANSI_RESET);
+                            System.out.println("Please enter Numbers not characters!\nGoing back");
                             break;
                         }
 
@@ -182,7 +180,7 @@ public class VehicleShowroom {
                         double p;
                         try{ p = Double.parseDouble(in.nextLine()); }
                         catch(NumberFormatException er) { 
-                            System.out.println(ANSI_YELLOW+"Please enter Numbers not characters!\nGoing back"+ANSI_RESET);
+                            System.out.println("Please enter Numbers not characters!\nGoing back");
                             break;
                         }
 
@@ -190,7 +188,7 @@ public class VehicleShowroom {
                         double t;
                         try{ t = Double.parseDouble(in.nextLine()); }
                         catch(NumberFormatException er) { 
-                            System.out.println(ANSI_YELLOW+"Please enter Numbers not characters!\nGoing back"+ANSI_RESET);
+                            System.out.println("Please enter Numbers not characters!\nGoing back");
                             break;
                         }
                         
@@ -198,7 +196,7 @@ public class VehicleShowroom {
                         double w;
                         try{ w = Double.parseDouble(in.nextLine()); }
                         catch(NumberFormatException er) { 
-                            System.out.println(ANSI_YELLOW+"Please enter Numbers not characters!\nGoing back"+ANSI_RESET);
+                            System.out.println("Please enter Numbers not characters!\nGoing back");
                             break;
                         }
 
@@ -207,7 +205,7 @@ public class VehicleShowroom {
                         System.out.println("New Heavy Vehicle Added! " + m);
                     }
                     else{
-                        System.out.println(ANSI_YELLOW+"Number:"+select+" is not an option\nGoing back!"+ANSI_RESET);
+                        System.out.println("Number:"+select+" is not an option\nGoing back!");
                     }
                     break;
                 
@@ -219,11 +217,11 @@ public class VehicleShowroom {
                     System.out.print("Enter index number of which vehicle you wish to remove: ");
                     try{ select = Integer.parseInt(in.nextLine()); }
                     catch(NumberFormatException e) { 
-                        System.out.println(ANSI_YELLOW+"Please enter Numbers not characters!\nNothing was Removed."+ANSI_RESET);
+                        System.out.println("Please enter Numbers not characters!\nNothing was Removed.");
                         break;
                     }
                     if(select<0 || select>=show.listofVehicles.size()){
-                        System.out.println(ANSI_YELLOW+"Invalid Option!\nNothing was Removed"+ANSI_RESET);
+                        System.out.println("Invalid Option!\nNothing was Removed");
                         select = 100;
                     }
                     else{
