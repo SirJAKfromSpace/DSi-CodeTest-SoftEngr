@@ -1,0 +1,35 @@
+<head>
+    <title>Welcome to Quackoders</title>
+</head>
+
+{% extends "base.html" %}
+{% block content %}
+
+<!-- <hr class="my-5"> -->
+<div class="row" style="text-align: center; color: #3f3d56;">
+    <div class="col-12 col-md-6">
+        <!-- <img src="static/undraw_balloons.png" class="img-fluid p-2" alt="DevPortal"> -->
+        <div>
+            <img src="static/quack_main.png" class="img-fluid p-2" alt="Home Splash">
+        </div>
+        <div>
+            <h1>Don't bust your feathers Coding!</h1>
+            <p class="lead">We're here to provide flightful software development services that aren't a total quack</p>
+        </div>
+    </div>
+    <div class="col-12 col-md-6 align-items-center">
+        <h1>Head to our DevPortal</h1>
+        <div class="container">
+            <h3>Login</h3><br>
+            <a href="/login" class="btn btn-warning btn-lg text-white">Login <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+        <hr>
+        <div class="container">
+            <h3>Sign up</h3><br>
+            <a href="/signup" class="btn btn-warning btn-lg text-white">Sign Up <i class="fas fa-arrow-circle-right"></i></a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,53 @@
+<head>
+	<title>Sign Up to Devportal</title>
+</head>
+
+{% extends "base.html" %}
+{% block content %}
+<br>
+<div>
+    <h1>Quaccount Devportal</h1>
+    <hr>
+    <div class="row">
+        <div class="col-12 col-md-6">
+            <img src="static/undraw_mobile_login.png" class="img-fluid p-2" alt="Home Splash">
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="container">
+                <h3>Create a New Quaccount</h3>
+                {% with messages = get_flashed_messages() %}
+                {% for message in messages %}
+                <div class="bg-warning text-white" style="padding: 0.5rem; margin: 0.75rem; text-align: center; vertical-align: middle;">
+                    <p>{{ message }}</p>
+                </div>
+                {% endfor %}
+                {% endwith %}
+                <hr>
+                <form action="" method="POST">
+                    <div class="form-group">
+                        <!-- <label for="exampleInputEmail1">Full Name</label> -->
+                        <input type="text" class="form-control" id="fullname" name="name" placeholder="Full Name">
+                    </div>
+
+                    <div class="form-group">
+                        <!-- <label for="exampleInputEmail1">Email address</label> -->
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <!-- <label for="exampleInputPassword1">Password</label> -->
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                    </div>
+
+                    <div class="form-group">
+                        <!-- <label for="exampleInputEmail1">Favorite Programming Language</label> -->
+                        <input type="text" class="form-control" id="language" name="language" placeholder="Favorite Programming Language">
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-warning text-white float-right">Sign Up &nbsp;&nbsp;<i class="fas fa-arrow-circle-up"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+{% endblock %}
