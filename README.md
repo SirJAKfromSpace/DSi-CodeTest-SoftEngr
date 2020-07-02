@@ -5,7 +5,7 @@ By Jawad Aziz Khan on the 30th of June 2020.
 
 ---
 
-#### Q1 Vehicle Showroom - Java
+### Q1 Vehicle Showroom - Java
 
 Navigate or ```cd``` to the ```q1_VehicleShowroom_Java\``` directory from a terminal
 Simply run the program using: ```java VehicleShowroom```.
@@ -19,4 +19,33 @@ Simply run the program using: ```java VehicleShowroom```.
 
 ---
 
-#### Q2
+### Q2 Simple Web App - Python
+
+Navigate or ```cd``` to the ```q2_SimpleWebApp_Python\``` directory from a terminal
+run ```pip install -r requirements.txt``` to install python dependencies
+
+Finally, run the webapp using ```python flask_app.py```.
+
+Python dependencies:
+-flask
+-requests
+-tinydb
+-validate_email
+
+
+
+####Features
+**Backend:**
+Python
+Flask
+TinyDB
+Email Validator
+flash
+icanhazdadjokes API
+
+**Frontend**
+Responsive design
+Bootstrap 4.4
+Font Awesome icons
+FOS Illustrations from UnDraw.co
+Jinja2 templating engine
