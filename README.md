@@ -25,6 +25,7 @@ Navigate or ```cd``` to the ```q2_SimpleWebApp_Python\``` directory from a termi
 run ```pip install -r requirements.txt``` to install python dependencies
 
 Finally, run the webapp using ```python flask_app.py```.
+The webpage should be accessable from http://127.0.0.1:5000/
 
 Python dependencies:
 -flask
