@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, flash
+import requests
 from tinydb import TinyDB, where
 from validate_email import validate_email
 
@@ -60,6 +61,9 @@ def signup():
         elif  not email_is_valid:
             flash('Email address not valid! Please try again')
             return redirect('/signup')
+        elif len(password) < 6:
+            flash('Password too short, it needs atleast 6 characters! Please try again')
+            return redirect('/signup')
         else:
             db.insert({'name': name, 'email': email, 'password': password, 'language': language})
             flash(f'Sign up Done! You can now Login.')
@@ -71,7 +75,17 @@ def signup():
 
 @app.route("/hello")
 def welc():
-    return render_template("landing.html")
+    if request.args.get('user') == None:
+        flash('Please login to continue')
+        return redirect('/login')
+    else:
+        print('req que:',request.args['user'])
+        u = db.get(doc_id = int(request.args['user']))
+        print(u)
+        # j = requests.get('https://geek-jokes.sameerkumar.website/api?format=json').json()
+        j = requests.get('https://icanhazdadjoke.com/', headers={'Accept':'application/json'}).json()
+        # print(j, j2)
+        return render_template("about.html", data = {'user': u, 'joke': j['joke']})
 
 ###
 
