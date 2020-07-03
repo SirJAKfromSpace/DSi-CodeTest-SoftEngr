@@ -39,9 +39,7 @@ Python dependencies:
 -tinydb
 -validate_email
 
-
-
-####Features
+#### Features
 
 **Backend:**
 - Python
@@ -56,4 +54,4 @@ Python dependencies:
 - Bootstrap 4.4
 - Font Awesome icons
 - FOS Illustrations from UnDraw.co
-- Jinja2 templating engine
+- Jinja2 page templates
