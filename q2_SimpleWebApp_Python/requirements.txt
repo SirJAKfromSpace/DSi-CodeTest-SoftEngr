@@ -4,7 +4,7 @@
 Flask == 1.1.2
 
 # D:\Code\DSi-CodeTest-SoftEngr\q2_SimpleWebApp_Python\flask_app.py: 2
-requests == 2.23.0
+requests == 2.31.0
 
 # D:\Code\DSi-CodeTest-SoftEngr\q2_SimpleWebApp_Python\flask_app.py: 3
 tinydb == 4.1.1
